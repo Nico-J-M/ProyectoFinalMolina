@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProyectoFinalMolina · Mini‑Ecommerce</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- SweetAlert2 para reemplazar alert/prompt/confirm -->
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- dayjs para fechas (librería externa simple) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🛒</span>
+      <h1>NeoStore</h1>
+    </div>
+    <div class="actions">
+      <input id="q" type="search" placeholder="Buscar producto…" />
+      <select id="category">
+        <option value="all">Todas las categorías</option>
+      </select>
+      <select id="sort">
+        <option value="featured">Destacados</option>
+        <option value="price-asc">Precio: menor a mayor</option>
+        <option value="price-desc">Precio: mayor a menor</option>
+        <option value="name-asc">Nombre A→Z</option>
+        <option value="name-desc">Nombre Z→A</option>
+      </select>
+      <button id="btnCart" class="btn primary">Carrito (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h2>Filtros</h2>
+      <div class="filter">
+        <label>
+          <input type="checkbox" id="inStockOnly" />
+          Solo disponibles
+        </label>
+      </div>
+      <div class="filter">
+        <label for="minPrice">Precio mínimo</label>
+        <input type="number" id="minPrice" min="0" step="1" placeholder="0" />
+      </div>
+      <div class="filter">
+        <label for="maxPrice">Precio máximo</label>
+        <input type="number" id="maxPrice" min="0" step="1" placeholder="9999" />
+      </div>
+      <button id="applyFilters" class="btn">Aplicar</button>
+      <button id="clearFilters" class="btn ghost">Limpiar</button>
+
+      <hr/>
+
+      <h2>Checkout rápido</h2>
+      <form id="checkoutForm" class="form">
+        <input required id="name"   name="name"   placeholder="Nombre y apellido"  value="Nicolás Molina" />
+        <input required id="email"  name="email"  placeholder="Email"             value="nicolas@example.com" type="email" />
+        <input required id="phone"  name="phone"  placeholder="Teléfono"          value="+54 11 1234-5678" />
+        <input required id="addr"   name="addr"   placeholder="Dirección"         value="Av. Siempre Viva 742, CABA" />
+        <button type="submit" class="btn primary">Finalizar compra</button>
+      </form>
+    </aside>
+
+    <section class="content">
+      <div id="status" class="status">Cargando catálogo…</div>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Drawer del carrito -->
+  <div id="cartDrawer" class="drawer">
+    <div class="drawer-header">
+      <h3>Tu carrito</h3>
+      <button id="closeCart" class="icon-btn" aria-label="Cerrar">✕</button>
+    </div>
+    <div id="cartItems" class="drawer-body"></div>
+    <div class="drawer-footer">
+      <div class="totals">
+        <span>Subtotal:</span><strong id="cartSubtotal">$0</strong>
+      </div>
+      <div class="totals small">
+        <span>Impuestos (21%):</span><strong id="cartTax">$0</strong>
+      </div>
+      <div class="totals">
+        <span>Total:</span><strong id="cartTotal">$0</strong>
+      </div>
+      <button id="checkoutBtn" class="btn primary">Ir a pagar</button>
+      <button id="clearCartBtn" class="btn ghost">Vaciar</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>ProyectoFinalMolina — Simulador Ecommerce. Datos cargados asíncronamente desde <code>data/products.json</code>.</p>
+    <p><small>© <span id="year"></span> NeoStore</small></p>
+  </footer>
+</body>
+</html>

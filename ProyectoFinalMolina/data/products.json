@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Auriculares Pro X",
+      "description": "Audio nítido con cancelación de ruido. Ideales para estudiar y gaming.",
+      "price": 72000,
+      "oldPrice": 89000,
+      "category": "Audio",
+      "stock": 10,
+      "image": "https://images.unsplash.com/photo-1518441798259-d41e8ff0a5db?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Teclado Mecánico 60%",
+      "description": "Compacto, switches rojos lineales y keycaps PBT.",
+      "price": 54000,
+      "oldPrice": 61000,
+      "category": "Periféricos",
+      "stock": 7,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Mouse Ergo Precision",
+      "description": "Ergonómico, sensor óptico de alta precisión, 6 botones programables.",
+      "price": 32000,
+      "category": "Periféricos",
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1587825140400-9ff40fc79d2e?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Monitor 27'' QHD 165Hz",
+      "description": "Pantalla IPS QHD, 165Hz, HDR10. Ideal para juegos y trabajo.",
+      "price": 289000,
+      "oldPrice": 315000,
+      "category": "Monitores",
+      "stock": 5,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Silla Gamer Lumbar+",
+      "description": "Soporte lumbar ajustable y materiales premium transpirables.",
+      "price": 199000,
+      "category": "Mobiliario",
+      "stock": 3,
+      "image": "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Micrófono USB Studio",
+      "description": "Patrón cardioide, ideal para streaming y videollamadas.",
+      "price": 65000,
+      "category": "Audio",
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=1200&auto=format&fit=crop"
+    }
+  ]
+}
